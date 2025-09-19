@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mikasan.mapper.ResourceReportsMapper">
+
+    <resultMap id="BaseResultMap" type="com.mikasan.pojo.ResourceReports">
+        <id property="id" column="id" />
+        <result property="reportName" column="report_name" />
+        <result property="gatewayName" column="gateway_name" />
+        <result property="content" column="content" />
+        <result property="reportTime" column="report_time" />
+        <result property="details" column="details"
+                typeHandler="com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, report_name, gateway_name, content, report_time, details
+    </sql>
+</mapper>
